@@ -14,6 +14,7 @@ app.use(bodyParser.json());
 
 app.get('/api/houses', ctrl.getHouses)
 app.post('/api/houses', ctrl.addHouse)
+app.delete('/api/houses/:id')
 
 const port = process.env.SERVER_PORT || 4000
 app.listen(port, () => console.log(`if you are quiet you can hear port ${port}`))

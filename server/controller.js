@@ -16,5 +16,9 @@ module.exports = {
         dbInstance.create_inventory([name, address, city, state, +zipCode]).then( (inventory )=>
             response.status(200).send(inventory)
         ).catch(error => console.log('help', error))
+    },
+
+    deleteHouse: (request, response, next) => {
+        const dbInstance = request.app.get('db')
     }
 }
